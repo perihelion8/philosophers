@@ -56,10 +56,10 @@ void	*monitor_routine(void *arg)
 				pthread_mutex_lock(&philos[0].rules->state_mutex);
 				philos[0].rules->simulation_end = 1;
 				pthread_mutex_unlock(&philos[0].rules->state_mutex);
-			usleep(1000);
+				ft_usleep(1);
 				return (NULL);
 			}
-			pthread_mutex_unlock(&philos[0].rules->state_mutex);
+			pthread_mutex_unlock(&philos[i].rules->state_mutex);
 			i++;
 		}
 		if (check_all_ate(philos))
