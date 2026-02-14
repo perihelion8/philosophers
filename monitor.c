@@ -56,7 +56,6 @@ void	*monitor_routine(void *arg)
 				pthread_mutex_lock(&philos[0].rules->state_mutex);
 				philos[0].rules->simulation_end = 1;
 				pthread_mutex_unlock(&philos[0].rules->state_mutex);
-				ft_usleep(1);
 				return (NULL);
 			}
 			pthread_mutex_unlock(&philos[i].rules->state_mutex);
@@ -69,7 +68,7 @@ void	*monitor_routine(void *arg)
 			pthread_mutex_unlock(&philos[0].rules->state_mutex);
 			return (NULL);
 		}
-		ft_usleep(10);
+		ft_usleep(5);
 	}
 	return (NULL);
 }
