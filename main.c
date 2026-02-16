@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "rules.h"
-#include "philo.h"
+#include "simulation.h"
 #include "monitor.h"
 
 static int	is_number(const char *str)
@@ -79,7 +78,7 @@ int	main(int argc, char *argv[])
 
 	if (argc < 5 || argc > 6)
 	{
-		printf("unavailabe number of arguments\n");
+		printf("unavailable number of arguments\n");
 		return (1);
 	}
 	i = 1;
@@ -89,8 +88,8 @@ int	main(int argc, char *argv[])
 			return (1);
 		i++;
 	}
-	rules_init(&rules, argc, argv);
-	philos = philos_create(&rules);
+	if (!simulation_setup(&rules, &philos, argc, argv))
+		return (1);
 	pthread_create(&monitor, NULL, monitor_routine, philos);
 	philos_join(philos);
 	pthread_join(monitor, NULL);

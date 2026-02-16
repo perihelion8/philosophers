@@ -3,7 +3,7 @@
 NAME	:= philo
 CC		:= cc
 CFLAGS	:= -Wall -Werror -Wextra -pthread
-SRC		:= main.c rules.c monitor.c time.c philo.c philo_routine.c philo_print.c
+SRC		:= main.c rules.c monitor.c time.c philo.c philo_routine.c philo_print.c simulation.c
 OBJ		:= $(SRC:.c=.o)
 
 %.o: %.c
