@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abazzoun <abazzoun@student.42beirut.com>   +#+  +:+       +#+        */
+/*   By: abazzoun <abazzoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 21:48:19 by abazzoun          #+#    #+#             */
-/*   Updated: 2026/02/14 08:09:35 by abazzoun         ###   ########.fr       */
+/*   Updated: 2026/02/18 13:41:44 by abazzoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,7 @@ int	main(int argc, char *argv[])
 	int			i;
 
 	if (argc < 5 || argc > 6)
-	{
-		printf("unavailable number of arguments\n");
 		return (1);
-	}
 	i = 1;
 	while (i < argc)
 	{
